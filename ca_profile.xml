@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>
+Templates for **Framewrk** — a self-hosted service that keeps Aura and Nixplay digital photo frames filled from your own PhotoPrism library.
+
+Support and bug reports: https://github.com/smichalczyk/framewrk/discussions
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/smichalczyk/framewrk/main/icon.png</Icon>
+  <WebPage>https://smichalczyk.github.io/framewrk/</WebPage>
+</CommunityApplications>

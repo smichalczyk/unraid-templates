@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>framewrk</Name>
+  <Repository>ghcr.io/smichalczyk/framewrk:latest</Repository>
+  <Registry>https://github.com/smichalczyk/framewrk/pkgs/container/framewrk</Registry>
+
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+
+  <Support>https://github.com/smichalczyk/framewrk/discussions</Support>
+  <Project>https://smichalczyk.github.io/framewrk/</Project>
+  <ReadMe>https://raw.githubusercontent.com/smichalczyk/framewrk/main/README.md</ReadMe>
+  <TemplateURL>https://raw.githubusercontent.com/smichalczyk/unraid-templates/main/templates/framewrk.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/smichalczyk/framewrk/main/icon.png</Icon>
+
+  <!-- The port named here is the CONTAINER port. Unraid substitutes whatever
+       host port the user picked in the Config block below. -->
+  <WebUI>http://[IP]:[PORT:8770]</WebUI>
+
+  <Overview>
+    Framewrk keeps your Aura and Nixplay digital photo frames filled from your own PhotoPrism library.
+
+    Point it at PhotoPrism, add the frames you own, and it uploads the photos that match your rules on a schedule — at the right size and shape for each screen — and takes them back off when they no longer qualify. It remembers what it has already sent, so nothing is uploaded twice. Portrait and landscape frames each get what suits them.
+
+    Nothing needs configuring before the first start. Open the console on port 8770, sign in with the one-time password printed in the container log, and set everything up there.
+
+    All state is one SQLite file under /data, so a backup is one file.
+
+    Requires a reachable PhotoPrism server and an Aura and/or Nixplay account. Free to use; not open source. Not affiliated with Aura, Nixplay or PhotoPrism.
+  </Overview>
+
+  <Category>MediaApp:Photos Tools:Utilities</Category>
+  <ExtraSearchTerms>photoprism aura nixplay photo frame digital picture frame sync</ExtraSearchTerms>
+  <Requires>A reachable PhotoPrism server, and an Aura and/or Nixplay account.</Requires>
+
+  <Changes>
+### 1.0.0
+First public release.
+  </Changes>
+
+  <Date>2026-08-03</Date>
+  <MinVer>6.12</MinVer>
+  <License>LicenseRef-Framewrk-EULA</License>
+
+  <DonateText/>
+  <DonateLink/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+
+  <Config
+    Name="WebUI"
+    Target="8770"
+    Default="8770"
+    Mode="tcp"
+    Description="Port for the Framewrk console. Change the host side if 8770 is already taken."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false">8770</Config>
+
+  <Config
+    Name="Data"
+    Target="/data"
+    Default="/mnt/user/appdata/framewrk"
+    Mode="rw"
+    Description="Holds sync.db — the settings, the frame list and the sync history. Back this folder up and you have backed up the whole installation."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false">/mnt/user/appdata/framewrk</Config>
+
+  <Config
+    Name="TZ"
+    Target="TZ"
+    Default="Europe/London"
+    Mode=""
+    Description="Your timezone as a tz database name, for example America/New_York. Without it every timestamp in the log and the console is UTC."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false">Europe/London</Config>
+
+  <Config
+    Name="PUID"
+    Target="PUID"
+    Default="99"
+    Mode=""
+    Description="User the container writes as. 99 is Unraid's nobody. Leave it alone unless you know you need otherwise."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false">99</Config>
+
+  <Config
+    Name="PGID"
+    Target="PGID"
+    Default="100"
+    Mode=""
+    Description="Group the container writes as. 100 is Unraid's users group."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false">100</Config>
+
+</Container>
