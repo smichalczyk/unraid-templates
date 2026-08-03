@@ -2,12 +2,6 @@ MIT License
 
 Copyright (c) 2026 Scott Michalczyk
 
-This licence covers the contents of this repository only — the Community
-Applications templates, their metadata, and the documentation here. It does
-not cover the applications those templates install, which carry their own
-licences. Framewrk in particular is free to use but is not open source; see
-https://github.com/smichalczyk/framewrk for its terms.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
