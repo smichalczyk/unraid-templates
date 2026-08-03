@@ -12,3 +12,12 @@ Applications reads this repository and keeps the templates up to date for you.
 
 Bug reports and questions belong on the app's own repository, linked above, not
 here.
+
+## Licence
+
+The templates and metadata in this repository are MIT licensed — Community
+Applications requires an OSI-approved licence on repository contents.
+
+That covers this repository only. The applications the templates install carry
+their own, separate licences: **Framewrk is free to use but is not open
+source**. See [its terms](https://github.com/smichalczyk/framewrk/blob/main/LICENSE).

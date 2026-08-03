@@ -1,56 +1,27 @@
-Framewrk End User Licence Agreement
-Copyright (c) 2026 Scott Michalczyk. All rights reserved.
+MIT License
 
-Framewrk is free to use. It is not open source.
+Copyright (c) 2026 Scott Michalczyk
 
+This licence covers the contents of this repository only — the Community
+Applications templates, their metadata, and the documentation here. It does
+not cover the applications those templates install, which carry their own
+licences. Framewrk in particular is free to use but is not open source; see
+https://github.com/smichalczyk/framewrk for its terms.
 
-WHAT YOU MAY DO
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-You may download, run and use Framewrk, on as many computers as you like, at
-home or at work, for as long as you like, without paying anything and without
-asking permission.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-You may make copies of the unmodified software for your own backup purposes.
-
-You may write about it, link to it, take screenshots of it, and tell people
-where to get it.
-
-
-WHAT YOU MAY NOT DO
-
-You may not sell Framewrk, charge for access to it, or include it in a product
-or service you charge for.
-
-You may not redistribute it — that includes republishing the container image
-under another name or on another registry, and bundling it into an appliance or
-an app store listing. Point people at the official download instead, so they get
-the real thing and the current version.
-
-You may not modify it and pass the result on to anyone else. Modifying your own
-copy, for your own use, is fine.
-
-You may not remove or alter the copyright notices, the licence, or the version
-the software reports.
-
-
-NO WARRANTY
-
-Framewrk is provided "as is", without warranty of any kind, express or implied,
-including but not limited to the warranties of merchantability, fitness for a
-particular purpose and non-infringement. In no event shall the author be liable
-for any claim, damages or other liability, whether in an action of contract,
-tort or otherwise, arising from, out of, or in connection with the software or
-the use of or other dealings in the software.
-
-This matters more than it usually does, because Framewrk uploads to and deletes
-from accounts you own on services that are not the author's. It talks to Aura
-and Nixplay through interfaces those companies do not publish and may change or
-withdraw at any time. Framewrk is not affiliated with, endorsed by, or connected
-to Aura, Nixplay or PhotoPrism. Keep your own backups of your photos. The copies
-on your frames are not a backup, and neither is anything Framewrk stores.
-
-
-IF THIS DOESN'T SUIT YOU
-
-If you want to do something this licence does not allow, ask. The answer may
-well be yes.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
