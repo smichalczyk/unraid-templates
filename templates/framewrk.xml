@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>framewrk</Name>
   <Repository>ghcr.io/smichalczyk/framewrk:latest</Repository>
-  <Registry>https://github.com/smichalczyk/framewrk/pkgs/container/framewrk</Registry>
+  <Registry>https://github.com/users/smichalczyk/packages/container/package/framewrk</Registry>
 
   <Network>bridge</Network>
   <MyIP/>
