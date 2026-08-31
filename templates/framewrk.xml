@@ -15,8 +15,6 @@
   <TemplateURL>https://raw.githubusercontent.com/smichalczyk/unraid-templates/main/templates/framewrk.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/smichalczyk/framewrk/main/icon.png</Icon>
 
-  <!-- The port named here is the CONTAINER port. Unraid substitutes whatever
-       host port the user picked in the Config block below. -->
   <WebUI>http://[IP]:[PORT:8770]</WebUI>
 
   <Overview>
@@ -36,19 +34,14 @@
   <Requires>A reachable PhotoPrism and/or Immich server, and an Aura and/or Nixplay account.</Requires>
 
   <Changes>
-### 1.1.0
-- Add Immich as a photo source alongside PhotoPrism. Configure its URL and API
-  key in the console, then use either source or both at once.
-- Support Immich 3.1 and newer; refuse unsupported older servers before a sync
-  starts.
-- Apply the shared Quality rule to Immich's optional star rating. Enable it in
-  Immich under **User Settings → Features → Rating**; `0` disables the rating
-  filter and `1` through `5` select that rating and above.
-- Resize one downloaded Immich original for every frame size that needs it,
-  reducing repeat downloads during a sync.
+### 1.1.1
+
+- Restore the browser CSRF cookie whenever an authenticated console session is
+  loaded. Reloading now repairs a stale sign-in token after an update instead
+  of rejecting actions with an expired-request message.
   </Changes>
 
-  <Date>2026-08-30</Date>
+  <Date>2026-08-31</Date>
   <MinVer>6.12</MinVer>
   <License>LicenseRef-Framewrk-EULA</License>
 
