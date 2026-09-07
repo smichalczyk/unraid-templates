@@ -34,14 +34,19 @@
   <Requires>A reachable PhotoPrism and/or Immich server, and an Aura and/or Nixplay account.</Requires>
 
   <Changes>
-### 1.1.1
+### 1.1.2
 
-- Restore the browser CSRF cookie whenever an authenticated console session is
-  loaded. Reloading now repairs a stale sign-in token after an update instead
-  of rejecting actions with an expired-request message.
+- Fix Sync Now sometimes showing no progress or feedback at all. The status
+  the console polls now flips to &quot;running&quot; the instant the sync worker
+  claims the job, instead of after its first database write, so a poll
+  right after clicking can no longer land in between and fall back to a
+  slow refresh for the rest of the run.
+- Fix the dashboard not refreshing after clicking Sync Now when there was
+  nothing new to sync. The Wall, Frames, and run history now update
+  reliably even when a sync completes very quickly.
   </Changes>
 
-  <Date>2026-08-31</Date>
+  <Date>2026-09-07</Date>
   <MinVer>6.12</MinVer>
   <License>LicenseRef-Framewrk-EULA</License>
 
