@@ -36,18 +36,19 @@
   <Requires>An Aura and/or Nixplay account. PhotoPrism or Immich is optional for direct uploads.</Requires>
 
   <Changes>
-### 1.2.0
+### 1.3.0
 
-- Add direct photo uploads to Aura and Nixplay without a photo library. Durable
-  jobs, per-frame delivery status, retry handling, and duplicate protection keep
-  explicit sends independent of PhotoPrism and Immich cleanup.
-- Add the Framewrk iPhone/iPad app and Photos Share Extension, with background
-  uploads, frame selection, delivery history, and secure device tokens.
-- Add Direct sends and connected devices to the console. Include direct photos
-  in Wall previews and counts, and support revoking a phone without changing
-  frame-service credentials.
-- Bound uploaded image size, queue storage, image retention, and vendor request
-  timeouts. Disclose Nixplay albums shared by multiple frames.
+- Reuse service connections and resized images across bounded direct-send
+  batches. Independent frame services can transfer concurrently, with ordered
+  uploads within each service and the existing duplicate/retry protections.
+- Enforce each frame&#x27;s portrait/landscape rules for direct uploads, including
+  EXIF rotation. Show skipped destinations in the server console.
+- Add an optional, isolated review account with simulated destinations. It uses
+  real server authentication, photo ingestion, resizing, previews, and durable
+  jobs, without forwarding review photos to frame services.
+- Simplify iOS Recent to confirm server receipt, remove filenames and per-frame
+  delivery controls, and add optional account usernames. Add Select all and
+  Deselect all to the app and Share Extension.
   </Changes>
 
   <Date>2026-09-22</Date>
