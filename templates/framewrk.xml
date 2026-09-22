@@ -10,7 +10,7 @@
   <Privileged>false</Privileged>
 
   <Support>https://github.com/smichalczyk/framewrk/discussions</Support>
-  <Project>https://smichalczyk.github.io/framewrk/</Project>
+  <Project>https://hangframewrk.io/</Project>
   <ReadMe>https://raw.githubusercontent.com/smichalczyk/framewrk/main/README.md</ReadMe>
   <TemplateURL>https://raw.githubusercontent.com/smichalczyk/unraid-templates/main/templates/framewrk.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/smichalczyk/framewrk/main/icon.png</Icon>
