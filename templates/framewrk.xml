@@ -24,29 +24,33 @@
 
     Nothing needs configuring before the first start. Open the console on port 8770, sign in with the one-time password printed in the container log, and set everything up there.
 
+    Send directly from the Framewrk iOS app or Photos Share Sheet without a photo library. Direct photos are independent of library rules, with delivery history and revocable device tokens.
+
     All state is one SQLite file under /data, so a backup is one file.
 
-    Immich 3.1 or newer is supported; configure its URL and an API key in the console. Its optional star rating is used by the shared Quality rule. Requires a reachable PhotoPrism and/or Immich server and an Aura and/or Nixplay account. Free to use; not open source. Not affiliated with Aura, Nixplay, PhotoPrism or Immich.
+    Immich 3.1 or newer is supported; configure its URL and an API key in the console. Its optional star rating is used by the shared Quality rule. Requires an Aura and/or Nixplay account. Library sync also requires a reachable PhotoPrism and/or Immich server. Free to use; not open source. Not affiliated with Aura, Nixplay, PhotoPrism or Immich.
   </Overview>
 
   <Category>MediaApp:Photos Tools:Utilities</Category>
-  <ExtraSearchTerms>photoprism immich aura nixplay photo frame digital picture frame sync</ExtraSearchTerms>
-  <Requires>A reachable PhotoPrism and/or Immich server, and an Aura and/or Nixplay account.</Requires>
+  <ExtraSearchTerms>photoprism immich aura nixplay photo frame digital picture frame sync ios share upload</ExtraSearchTerms>
+  <Requires>An Aura and/or Nixplay account. PhotoPrism or Immich is optional for direct uploads.</Requires>
 
   <Changes>
-### 1.1.2
+### 1.2.0
 
-- Fix Sync Now sometimes showing no progress or feedback at all. The status
-  the console polls now flips to &quot;running&quot; the instant the sync worker
-  claims the job, instead of after its first database write, so a poll
-  right after clicking can no longer land in between and fall back to a
-  slow refresh for the rest of the run.
-- Fix the dashboard not refreshing after clicking Sync Now when there was
-  nothing new to sync. The Wall, Frames, and run history now update
-  reliably even when a sync completes very quickly.
+- Add direct photo uploads to Aura and Nixplay without a photo library. Durable
+  jobs, per-frame delivery status, retry handling, and duplicate protection keep
+  explicit sends independent of PhotoPrism and Immich cleanup.
+- Add the Framewrk iPhone/iPad app and Photos Share Extension, with background
+  uploads, frame selection, delivery history, and secure device tokens.
+- Add Direct sends and connected devices to the console. Include direct photos
+  in Wall previews and counts, and support revoking a phone without changing
+  frame-service credentials.
+- Bound uploaded image size, queue storage, image retention, and vendor request
+  timeouts. Disclose Nixplay albums shared by multiple frames.
   </Changes>
 
-  <Date>2026-09-07</Date>
+  <Date>2026-09-22</Date>
   <MinVer>6.12</MinVer>
   <License>LicenseRef-Framewrk-EULA</License>
 
