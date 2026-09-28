@@ -36,22 +36,16 @@
   <Requires>An Aura and/or Nixplay account. PhotoPrism or Immich is optional for direct uploads.</Requires>
 
   <Changes>
-### 1.3.0
+### 1.3.1
 
-- Reuse service connections and resized images across bounded direct-send
-  batches. Independent frame services can transfer concurrently, with ordered
-  uploads within each service and the existing duplicate/retry protections.
-- Enforce each frame&#x27;s portrait/landscape rules for direct uploads, including
-  EXIF rotation. Show skipped destinations in the server console.
-- Add an optional, isolated review account with simulated destinations. It uses
-  real server authentication, photo ingestion, resizing, previews, and durable
-  jobs, without forwarding review photos to frame services.
-- Simplify iOS Recent to confirm server receipt, remove filenames and per-frame
-  delivery controls, and add optional account usernames. Add Select all and
-  Deselect all to the app and Share Extension.
+- Use the selected PhotoPrism primary image for library sync, preventing another file in a JPEG/RAW stack from supplying a developed RAW preview.
+
+- Remove individual synced photos from Nixplay albums when they no longer match source or orientation rules. Existing uploads without remote IDs are supported.
+- Verify removal before clearing tracking records, and preserve records when Nixplay returns an invalid listing or does not remove the photo.
+- Correct removal support descriptions in the console, documentation, and website.
   </Changes>
 
-  <Date>2026-09-22</Date>
+  <Date>2026-09-28</Date>
   <MinVer>6.12</MinVer>
   <License>LicenseRef-Framewrk-EULA</License>
 
