@@ -24,6 +24,8 @@
 
     Nothing needs configuring before the first start. Open the console on port 8770, sign in with the one-time password printed in the container log, and set everything up there.
 
+    Join the iPhone and iPad public beta at https://testflight.apple.com/join/HZ7kN8k9 (iOS/iPadOS 18+, HTTPS access to your Framewrk server).
+
     Send directly from the Framewrk iOS app or Photos Share Sheet without a photo library. Direct photos are independent of library rules, with delivery history and revocable device tokens.
 
     All state is one SQLite file under /data, so a backup is one file.
@@ -36,9 +38,11 @@
   <Requires>An Aura and/or Nixplay account. PhotoPrism or Immich is optional for direct uploads.</Requires>
 
   <Changes>
-### 1.3.2
+### 1.3.3
 
-- Identify Direct sends by their destination frames instead of photo filenames, and label the received time.
+- Group Direct sends by delivery outcome, showing each frame once and explaining orientation skips with concise landscape-only or portrait-only labels.
+- Open the Framewrk iPhone and iPad public beta: [Join on TestFlight](https://testflight.apple.com/join/HZ7kN8k9). Requires iOS/iPadOS 18+, your own Framewrk server over HTTPS, and an Aura or Nixplay account with a configured destination. PhotoPrism and Immich are optional for direct sends.
+- Add beta setup requirements and feedback instructions to the website and public documentation.
   </Changes>
 
   <Date>2026-10-14</Date>
