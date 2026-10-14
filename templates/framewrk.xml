@@ -36,16 +36,12 @@
   <Requires>An Aura and/or Nixplay account. PhotoPrism or Immich is optional for direct uploads.</Requires>
 
   <Changes>
-### 1.3.1
+### 1.3.2
 
-- Use the selected PhotoPrism primary image for library sync, preventing another file in a JPEG/RAW stack from supplying a developed RAW preview.
-
-- Remove individual synced photos from Nixplay albums when they no longer match source or orientation rules. Existing uploads without remote IDs are supported.
-- Verify removal before clearing tracking records, and preserve records when Nixplay returns an invalid listing or does not remove the photo.
-- Correct removal support descriptions in the console, documentation, and website.
+- Identify Direct sends by their destination frames instead of photo filenames, and label the received time.
   </Changes>
 
-  <Date>2026-09-28</Date>
+  <Date>2026-10-14</Date>
   <MinVer>6.12</MinVer>
   <License>LicenseRef-Framewrk-EULA</License>
 
