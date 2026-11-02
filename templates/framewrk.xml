@@ -38,14 +38,16 @@
   <Requires>An Aura and/or Nixplay account. PhotoPrism or Immich is optional for direct uploads.</Requires>
 
   <Changes>
-### 1.3.3
+### 1.3.4
 
-- Group Direct sends by delivery outcome, showing each frame once and explaining orientation skips with concise landscape-only or portrait-only labels.
-- Open the Framewrk iPhone and iPad public beta: [Join on TestFlight](https://testflight.apple.com/join/HZ7kN8k9). Requires iOS/iPadOS 18+, your own Framewrk server over HTTPS, and an Aura or Nixplay account with a configured destination. PhotoPrism and Immich are optional for direct sends.
-- Add beta setup requirements and feedback instructions to the website and public documentation.
+- Speed up Aura uploads by removing unnecessary queue waits and fixed pauses. A repeat test of 15 photos across 69 frame deliveries completed in 59 seconds, down from 8 minutes 27 seconds; results depend on your library and connection.
+- Upload to Aura and Nixplay concurrently while keeping requests within each service ordered and memory use bounded.
+- Give each Framewrk installation its own persistent Aura device identity, preventing repeated authentication failures caused by a shared device identifier.
+- Confirm Aura registers each uploaded asset before recording delivery, and improve authentication diagnostics without exposing credentials.
+- Preserve cancellation, retry, and per-frame delivery tracking during concurrent uploads.
   </Changes>
 
-  <Date>2026-10-14</Date>
+  <Date>2026-11-02</Date>
   <MinVer>6.12</MinVer>
   <License>LicenseRef-Framewrk-EULA</License>
 
